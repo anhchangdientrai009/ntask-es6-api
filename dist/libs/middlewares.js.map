@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/libs/middlewares.js"],"names":["module","exports","app","set"],"mappings":";;AAAAA,OAAOC,OAAP,GAAiB,eAAO;AACpBC,QAAIC,GAAJ,CAAQ,MAAR,EAAgB,IAAhB;AACAD,QAAIC,GAAJ,CAAQ,aAAR,EAAuB,CAAvB;AACH,CAHD","file":"middlewares.js","sourcesContent":["module.exports = app => {\r\n    app.set('port', 3000);\r\n    app.set('json spaces', 2);\r\n};"]}

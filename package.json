@@ -1,0 +1,48 @@
+{
+  "name": "ntask-api",
+  "version": "1.0.0",
+  "description": "Task list API",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run apidoc & npm run clusters",
+    "clusters": "babel-node src/clusters.js",
+    "apidoc": "apidoc -i src/routes/ -o src/public/apidoc",
+    "test": "cross-env NODE_ENV=test mocha --require src/test/helpers --reporter spec --compilers js:babel-register --slow 5000 src/test/**/*.js",
+    "build": "babel src -d dist -s"
+  },
+  "apidoc": {
+    "name": "NTask API documentation",
+    "template": {
+      "forceLanguage": "en"
+    }
+  },
+  "author": "Hoang Tran",
+  "license": "MIT",
+  "dependencies": {
+    "babel-cli": "^6.5.1",
+    "babel-preset-es2015": "^6.5.0",
+    "bcrypt": "^1.0.2",
+    "body-parser": "^1.15.0",
+    "compression": "^1.6.1",
+    "consign": "^0.1.2",
+    "cors": "^2.7.1",
+    "express": "^4.13.4",
+    "helmet": "^1.1.0",
+    "jwt-simple": "^0.4.1",
+    "morgan": "^1.6.1",
+    "mysql": "^2.13.0",
+    "passport": "^0.3.2",
+    "passport-jwt": "^2.0.0",
+    "sequelize": "^3.19.2",
+    "winston": "^2.1.1"
+  },
+  "devDependencies": {
+    "apidoc": "^0.15.1",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-register": "^6.5.2",
+    "chai": "^3.5.0",
+    "cross-env": "^3.2.4",
+    "mocha": "^2.4.5",
+    "supertest": "^1.2.0"
+  }
+}
