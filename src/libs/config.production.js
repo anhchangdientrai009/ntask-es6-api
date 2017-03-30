@@ -1,11 +1,11 @@
 import logger from "./logger.js";
 
 module.exports = {
-    database: "ntasks",
-    username: "root",
-    password: "",
+    database: "sql12166466",
+    username: "sql12166466",
+    password: "aPCmChqrUl",
     params: {
-        host: "localhost",
+        host: "sql12.freemysqlhosting.net",
         dialect: "mysql",
         logging: (sql) => {
             logger.info(`[${new Date()}] ${sql}`);
