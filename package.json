@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run apidoc & npm run clusters",
-    "clusters": "babel-node src/clusters.js",
+    "clusters": "babel-node src/index.js",
     "apidoc": "apidoc -i src/routes/ -o src/public/apidoc",
     "test": "cross-env NODE_ENV=test mocha --require src/test/helpers --reporter spec --compilers js:babel-register --slow 5000 src/test/**/*.js",
     "build": "babel src -d dist -s"
