@@ -1,14 +1,10 @@
 import fs from "fs";
-import https from "https";
+import http from "http";
 
 module.exports = app => {  
-    if(process.env.NODE_ENV !== "test") {
-        const credentials = {
-            key: fs.readFileSync("ntasks.key"),
-            cert: fs.readFileSync("ntasks.cert")
-        }
+    if(process.env.NODE_ENV !== "test") {    
         app.db.sequelize.sync().done(() => {
-            https.createServer(credentials, app)
+            http.createServer(app)
                 .listen(app.get('port'), () => {
                 console.log(`NTask API Port-${app.get('port')}`);
             });
